@@ -1,0 +1,73 @@
+import random
+
+# people = ['Przemek', 'Kasia', 'Robert', 'Katia', 'Olek', 'Marta', 'Mama', 'Tata', 'Justyna', 'Paweł', 'Kasieńka']
+people_data = {
+    'Przemek': {
+        'email': 'przemyslaw.knapek@gmail.com'
+    },
+    'Kasia': {
+        'email': 'katarzyna.rypien@gmail.com'
+    },
+    'Robert': {
+        'email': 'rsknapek@gmail.com'
+    },
+    'Katia': {
+        'email': 'katsiaryna.knapek@gmail.com'
+    },
+    'Olek': {
+        'email': 'aleksanderknapek@gmail.com'
+    },
+    'Marta': {
+        'email': 'martaolszta1989@gmail.com'
+    },
+    'Mama': {
+        'email': ''
+    },
+    'Tata': {
+        'email': ''
+    },
+    'Justyna': {
+        'email': 'jusia.odair@gmail.com'
+    },
+    'Paweł': {
+        'email': 'cader.pc@gmail.com'
+    },
+    'Kasieńka': {
+        'email': ''
+    },
+}
+
+print(people_data['Robert']['email'])
+people = list(people_data.keys())
+
+
+def random_pairs(seq):
+    people_from = seq
+    random.shuffle(people_from)
+    people_to = people_from[:]
+    pairs = []
+
+    for p in people_from:
+        r = random.choice([x for x in people_to if x != p])
+        pairs.append((p, r))
+        people_to.remove(r)
+    return pairs
+
+pairs = random_pairs(people)
+# print(pairs)
+
+for pair in pairs:
+    people_data[pair[0]]['gift_to'] = pair[1]
+
+for item in people_data.items():
+    print(item[0], item[1]['gift_to'])
+
+for item in people_data.items():
+    print(item)
+
+
+
+
+
+
+
