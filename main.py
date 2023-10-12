@@ -1,6 +1,6 @@
 import random
+import yagmail
 
-# people = ['Przemek', 'Kasia', 'Robert', 'Katia', 'Olek', 'Marta', 'Mama', 'Tata', 'Justyna', 'Paweł', 'Kasieńka']
 people_data = {
     'Przemek': {
         'email': 'przemyslaw.knapek@gmail.com'
@@ -65,6 +65,9 @@ for item in people_data.items():
 for item in people_data.items():
     print(item)
 
+
+yag = yagmail.SMTP('knapeksecretsanta@gmail.com', oauth2_file='~/Downloads/client_secret_182627804387-ejvvd3scnvks3on9rdmoe7orgblj7mce.apps.googleusercontent.com.json')
+yag.send(to='canislupusrk@gmail.com', subject="Jeszce coś", contents='Coś zupełnie nowego')
 
 
 
