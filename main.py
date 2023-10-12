@@ -66,11 +66,7 @@ for item in people_data.items():
     print(item)
 
 
-yag = yagmail.SMTP('knapeksecretsanta@gmail.com', oauth2_file='~/Downloads/client_secret_182627804387-ejvvd3scnvks3on9rdmoe7orgblj7mce.apps.googleusercontent.com.json')
-yag.send(to='canislupusrk@gmail.com', subject="Jeszce coś", contents='Coś zupełnie nowego')
-
-
-
-
+yag = yagmail.SMTP('knapeksecretsanta@gmail.com', oauth2_file='~/Programowanie/Moje projekty/maszyna-losujaca/client_secret.json')
+yag.send(to='canislupusrk@gmail.com', subject="Znów", contents='Coś zupełnie nowego')
 
 
