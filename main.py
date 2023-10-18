@@ -2,11 +2,10 @@ import random
 import yagmail
 import json
 
-yag = yagmail.SMTP('knapeksecretsanta@gmail.com', oauth2_file='~/Programowanie/Moje projekty/maszyna-losujaca/client_secret.json')
+yag = yagmail.SMTP('knapeksecretsanta@gmail.com', oauth2_file='client_secret.json')
 
 with open('people_data.json') as json_file:
     people_data = json.load(json_file)
-
 
 people = list(people_data.keys())
 
